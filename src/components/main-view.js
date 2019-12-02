@@ -1,5 +1,6 @@
 import React from 'react';
 import AlbumsList from './albums-list';
+import SearchField from './search-field';
 
 class MainView extends React.Component {
     constructor(props) {
@@ -24,6 +25,7 @@ class MainView extends React.Component {
         return (
             <div>
                 <div>Vista principal</div>
+                <SearchField></SearchField>
                 <AlbumsList albums={this.state.albums}></AlbumsList>
             </div>   
         )
