@@ -7,9 +7,9 @@ const AlbumsList = ({ albums }) => {
             {albums.map((album) => {
                 return (
                     <Album
-                        name={album.trackName}
+                        name={album.collectionCensoredName}
                         artist={album.artistName}
-                        price={album.trackPrice}
+                        price={album.collectionPrice}
                         imageUrl={album.artworkUrl100}>
 
                     </Album>
