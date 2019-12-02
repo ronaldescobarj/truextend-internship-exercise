@@ -13,6 +13,7 @@ class MainView extends React.Component {
     }
 
     updateResults(albums) {
+        console.log(albums);
         this.setState({ firstTime: false, albums });
     }
 

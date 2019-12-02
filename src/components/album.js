@@ -12,7 +12,7 @@ const Album = (props) => {
                         {props.artist}
                     </Card.Text>
                     <Card.Text>
-                        {props.price}
+                        {props.price}$
                     </Card.Text>
                 </Card.Body>
             </Card>

@@ -25,7 +25,7 @@ class SearchField extends React.Component {
         let rawSearchFilter = this.state.searchFilter;
         let lowercaseSearchFilter = rawSearchFilter.toLowerCase();
         let searchFilterForUrl = lowercaseSearchFilter.replace(' ', '+');
-        let searchQuery = BASE_URL + searchFilterForUrl;
+        let searchQuery = BASE_URL + searchFilterForUrl + '&entity=album';
         return searchQuery;
     }
 
