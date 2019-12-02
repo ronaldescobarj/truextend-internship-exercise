@@ -8,24 +8,30 @@ class MainView extends React.Component {
         this.state = {
             albums: [
                 {
-                    name: 'Sgt peppers',
-                    artist: 'The Beatles',
-                    price: '20$'
+                    trackName: 'Sgt peppers',
+                    artistName: 'The Beatles',
+                    trackPrice: '20$'
                 },
                 {
-                    name: 'Unknown Pleasures',
-                    artist: 'Joy Division',
-                    price: '15$'
+                    trackName: 'Unknown Pleasures',
+                    artistName: 'Joy Division',
+                    trackPrice: '15$'
                 },
             ]
         }
+        this.updateResults = this.updateResults.bind(this);
+    }
+
+    updateResults(albums) {
+        console.log(albums);
+        this.setState({ albums });
     }
 
     render() {
         return (
             <div>
                 <div>Vista principal</div>
-                <SearchField></SearchField>
+                <SearchField updateResults={this.updateResults}></SearchField>
                 <AlbumsList albums={this.state.albums}></AlbumsList>
             </div>   
         )
