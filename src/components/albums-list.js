@@ -6,7 +6,13 @@ const AlbumsList = ({ albums }) => {
         <div>
             {albums.map((album) => {
                 return (
-                    <Album name={album.name} artist={album.artist} price={album.price}></Album>
+                    <Album
+                        name={album.trackName}
+                        artist={album.artistName}
+                        price={album.trackPrice}
+                        imageUrl={album.artworkUrl100}>
+
+                    </Album>
                 )
             })}
         </div>
