@@ -31,7 +31,8 @@ class SearchField extends React.Component {
 
     async search() {
         let url = this.createSearchQuery();
-        let results = await axios.get(url);
+        let headers = { 'Accept': 'application/json, text/plain, */*' }
+        let results = await axios.get(url, headers);
         let albums = results.data.results;
         this.props.updateResults(albums);
         this.setState({ results: albums });
